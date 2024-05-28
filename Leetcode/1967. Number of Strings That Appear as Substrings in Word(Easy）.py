@@ -23,4 +23,4 @@ class Solution:
 
 
 if __name__ == '__main__':
-    print(Solution().numOfStrings(patterns = ["a","abc","bc","d"], word = "abc"))
+    print(Solution().numOfStrings(patterns=["a", "abc", "bc", "d"], word="abc"))

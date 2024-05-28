@@ -16,7 +16,7 @@
 # Your function should return length = 5, with the first five elements of nums being modified to 0, 1, 2, 3, and 4 respectively.
 #
 # It doesn't matter what values are set beyond the returned length.
-
+from typing import List
 class Solution(object):
     def removeDuplicates(self, nums):
         """
@@ -52,6 +52,19 @@ class Solution(object):
         nums[count] = nums[len(nums) - 1]
 
         return count + 1
+
+    def removeDuplicates_3(self, nums: List[int]) -> int:
+
+        point = 0
+
+        for start, value in enumerate(nums):
+            if value == nums[point]:
+                continue
+            point += 1
+            nums[start], nums[point] = nums[point], nums[start]
+
+        print(nums)
+        return point + 1
 
 
 print(Solution().removeDuplicates([1, 1, 2, 3, 3]))

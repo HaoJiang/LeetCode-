@@ -20,7 +20,7 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        maxlen1 = 0
+        maxlength: int = 0
         maxlen2 = 0
         maxcur1 = 0
         maxcur2 = 0
@@ -33,7 +33,7 @@ class Solution(object):
             maxcur1 += 1
             maxcur2 += 1
             if cur1 == 0:
-                maxlen1 = max(maxlen1, maxcur1)
+                maxlength = max(maxlength, maxcur1)
             elif cur1 < 0:
                 maxcur1 = 0
                 cur1 = 0
@@ -43,7 +43,7 @@ class Solution(object):
                 maxcur2 = 0
                 cur2 = 0
 
-        return max(maxlen1, maxlen2)
+        return max(maxlength, maxlen2)
 
 
 if __name__ == "__main__":
